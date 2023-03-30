@@ -21,9 +21,9 @@ defmodule Flutterwave.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tesla, "~> 1.4"},
-      {:hackney, "~> 1.17"},
-      {:jason, "~> 1.0.0"}
+      {:tesla, "~> 1.5"},
+      {:hackney, "~> 1.18.1"},
+      {:jason, "~> 1.3"}
     ]
   end
 end
