@@ -26,7 +26,7 @@ defmodule Flutterwave.Api do
   end
 
   defp flutterwave_endpoint(route) do
-    base_url() <> route
+    base_url() <> "/" <> version() <> "/" <> route
   end
 
   defp handle_response({:ok, response}) do
@@ -51,5 +51,9 @@ defmodule Flutterwave.Api do
       Authorization: "Bearer #{Application.get_env(:flutterwave, :secret_key)}",
       Accept: "Application/json"
     ]
+  end
+
+  defp version do
+    Application.get_env(:flutterwave, :api_version, "v3")
   end
 end
