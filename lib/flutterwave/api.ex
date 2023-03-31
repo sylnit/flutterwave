@@ -29,8 +29,8 @@ defmodule Flutterwave.Api do
     base_url() <> route
   end
 
-  defp handle_response({:ok, }) do
-    body = Jason.decode(body)
+  defp handle_response({:ok, response}) do
+    body = Jason.decode(response)
 
     {:ok,
       %Response{
